@@ -27,9 +27,17 @@ to Google Geocode API. Hence, if we get multiple requests asking for geo coordin
 avoid network call to Google API and serve the request from cache.  
 ```
 
-API Contract
+API Contract  
+```
+API - http://localhost:8080/apicall/geocode?locname=mysore  
+Response (for first call) - {"latitude":"12.2958104","longitude":"76.6393805","source":"API"}  
+Response (for subsequent calls) - {"latitude":"12.2958104","longitude":"76.6393805","source":"CACHE"}  
 
-API - 
-Response - 
+*SOURCE field in API response is to identify the response source i.e API call or CACHE* 
+```
 
-*SOURCE FIELD IN API RESPONSE IS TO IDENTIFY THE RESPONSE SOURCE i.e API CALL OR CACHE* 
+First Call (Source API)
+
+Second Call (Source CACHE)
+
+Server Log
