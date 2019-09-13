@@ -13,5 +13,23 @@ Result:
 **Library** -  Jackson , Jedis (Redis)  
 
 **Flow of Control -**  
+```
+1. GeoCodeApplication (main function - [src/main/java/demo/Geocode1Application.java])
+2. GeocodeController (Controller - [src/main/java/controller/GeocodeController.java])
+3. GeocodeService (Service Layer - [src/main/java/service/GeocodeService.java])  
+*Data Transfer Object (DTO) - (geodata - model layer - [src/main/java/model/geodata.java])*  
+```
 
-GeoCodeApplication (main function - 
+**Caching -**  
+```
+As we know it is expensive to call the third party API repeatedly we need to reduce the number of API calls  
+to Google Geocode API. Hence, if we get multiple requests asking for geo coordinates for same city we need to  
+avoid network call to Google API and serve the request from cache.  
+```
+
+API Contract
+
+API - 
+Response - 
+
+*SOURCE FIELD IN API RESPONSE IS TO IDENTIFY THE RESPONSE SOURCE i.e API CALL OR CACHE* 
