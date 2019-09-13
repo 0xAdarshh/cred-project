@@ -36,8 +36,12 @@ Response (for subsequent calls) - {"latitude":"12.2958104","longitude":"76.63938
 *SOURCE field in API response is to identify the response source i.e API call or CACHE* 
 ```
 
-First Call (Source API)
+## First Call (Source API)
+![alt text](https://github.com/adarsh456/cred-project/blob/master/screenshots/api%20source.PNG)
 
-Second Call (Source CACHE)
 
-Server Log
+## Second Call (Source CACHE)
+![alt text](https://github.com/adarsh456/cred-project/blob/master/screenshots/cache%20source.PNG)
+
+## Server Log
+![alt text](https://github.com/adarsh456/cred-project/blob/master/screenshots/server%20log.PNG)
