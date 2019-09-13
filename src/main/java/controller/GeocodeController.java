@@ -15,6 +15,7 @@ public class GeocodeController {
 	@Autowired
 	GeocodeService gs;
 	
+	//API REQUEST [http://localhost:8080/apicall/geocode?locname=cityname] gets mapped to this function
 	@GetMapping("/geocode")
 	  public geodata getGeoData(
 	      @RequestParam("locname") String locname) {

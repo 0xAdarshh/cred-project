@@ -1,5 +1,6 @@
 package model;
 
+//This class object is used as Data Transfer Object
 public class geodata {
 
 	public String latitude;

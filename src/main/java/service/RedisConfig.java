@@ -7,7 +7,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
-
+//This class is used to setup the Redis configuration
 public class RedisConfig {
 	
 	public static final String REDIS_HOST = "localhost";

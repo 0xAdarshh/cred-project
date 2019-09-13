@@ -14,6 +14,7 @@ import model.geodata;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+//This is Service Layer class which provides Service to the Controller Layer
 @Service
 public class GeocodeService {
 
@@ -28,9 +29,10 @@ public class GeocodeService {
     
     if (names.size() == 0) {		//Check if Cache is available if yes
     	
+    	
     	//get data from API and store it in Cache for future API calls
 
-    	//Call the Google GeoCode RestApi 
+    	//Call the Google GeoCode RestAPI 
     	RestTemplate restTemplate = new RestTemplate();
     	String tempquery = query.replaceAll(",","+");
     	String ResourceUrl = "https://maps.googleapis.com/maps/api/geocode/json?address="+tempquery+"&key=AIzaSyBC1mXeLL9uJrgXQiv3CQDJyt92ivDNPs0";
@@ -50,7 +52,8 @@ public class GeocodeService {
     			String lat = loc.path("lat").toString();	//latitude
     			String long1 = loc.path("lng").toString();	//longitude
     			
-    			String json = "{\"latitude\":\""+lat+"\",\"longitude\":\""+long1+"\",\"source\":\"CACHE\"}";	//store JSON as string in Cache
+    			String json = "{\"latitude\":\""+lat+"\",\"longitude\":\""+
+    							long1+"\",\"source\":\"CACHE\"}";	//store JSON as string in Cache
     			
     			jedis.set(query,json);						//store key -> value pair in cache
     			
